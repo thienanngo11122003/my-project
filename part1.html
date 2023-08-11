@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Your Personal Website</title>
+  <style>
+    .error-message {
+      color: red;
+    }
+  
+    .required-indicator {
+      color: red;
+    }
+  
+    .required-label:after {
+      content: " *";
+      color: red;
+    }
+  </style>
+  
+</head>
+<body>
+  <header style="background-image: url('seneca1.png');">
+    <h1></h1>
+  <br><br><br><br><br>
+    <nav>
+      <ul>
+        <li class="active"><a href="home.html">Home</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br><br>
+  <main>
+    <section id="contact-section">
+      <h2>Visitor's Info & Message</h2>
+      <form id="contact-form" action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+        <labe for="fullName" class="required-label">Name</labe>
+        <label for="firstName"></label>
+        <input type="text" id="firstName" name="firstName" required placeholder="First or Given Name">
+
+        <label for="lastName"></label>
+        <input type="text" id="lastName" name="lastName" required placeholder="Last Name">
+        <div class="error-message" id="full-name-error"></div>
+<br>
+        <div class="input-group">
+          <label for="email" class="required-label">Email Address </label>
+          <input type="email" id="email" name="email" required>
+          <div class="error-message" id="email-error"></div>
+        </div>
+<br>
+        <div>
+          <label for="job-title">Job Title</label>
+          <input type="text" id="job-title" name="job-title">
+        </div>
+<br>
+        <div class="input-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+          <div class="error-message" id="phone-error"></div>
+        </div>
+<br>
+        <div>
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address">
+        </div>
+<br>
+        <div>
+          <label for="postalCode">ZIP/Postal Code</label>
+          <input type="text" id="postalCode" name="postalCode">
+          <span class="error-message" id="postalCodeError"></span>
+        </div>
+<br>
+        <div class="input-group">
+          <label for="country" class="required-label">Country </label>
+          <select id="country" name="country" required>
+            <option value="">Select a country</option>
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+            <option value="GB">United Kingdom</option>
+            <option value="AU">Australia</option>
+            <option value="DE">Germany</option>
+            <option value="FR">France</option>
+            <option value="JP">Japan</option>
+            <option value="IN">India</option>
+            <option value="BR">Brazil</option>
+            <option value="VN">Vietnam</option>
+          </select>
+          <div class="error-message" id="country-error"></div>
+        </div>
+<br>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <!-- Footer content here -->
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
